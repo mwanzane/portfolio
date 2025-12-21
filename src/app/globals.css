@@ -23,6 +23,16 @@
   --color-red-700: 185 28 28; /* darker red */
 }
 
+/* Typography */
+@layer base {
+  h1, h2, h3 {
+    @apply font-display;
+  }
+  p, nav, button {
+    @apply font-sans;
+  }
+}
+
 /* Hover Transitions */
 @layer utilities {
   .transition-smooth {
