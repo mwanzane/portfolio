@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { Button } from '@/components/Button';
 import ProjectCard from '@/components/ProjectCard';
 import SectionHeading from '@/components/SectionHeading';
+import WelcomeModal from '@/components/WelcomeModal';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <WelcomeModal />
 
       {/* Hero */}
       <section className="pt-20 pb-0 bg-surface">
