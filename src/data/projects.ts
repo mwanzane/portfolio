@@ -2,7 +2,7 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
    {
-     title: "Red kite candy",
+      title: "Red Kite Candy",
      role: "Independent Project, Brand Story",
      tags: ["Product Marketing", "Content Strategy", "Digital Marketing"],
      thumbnail: "https://picsum.photos/400/300",
