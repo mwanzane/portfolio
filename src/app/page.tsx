@@ -43,7 +43,7 @@ export default function Home() {
                      <div className="w-full md:w-1/2 text-center md:text-left">
                        <h3 className="text-2xl font-bold text-text mb-4">{project.title}</h3>
                        <div className="flex flex-wrap gap-2 justify-center mb-4">
-                         {(project.slug === 'red-kite-candy' ? ["Brand Story", "Content Strategy", "Digital Marketing"] : ["Content Strategy", "Digital Marketing"]).map(tag => (
+                         {(project.slug === 'red-kite-candy' ? ["Brand Story", "Content Strategy", "Digital Marketing"] : project.slug === 'replom' ? ["Content Strategy", "Digital Marketing"] : []).map(tag => (
                            <Link key={tag} href={project.slug === 'red-kite-candy' ? '/skills/redkite-candy' : '/skills/replom'} className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">{tag}</Link>
                          ))}
                        </div>
