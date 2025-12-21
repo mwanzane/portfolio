@@ -16,14 +16,14 @@ export default function Header() {
             />
             <div className="absolute inset-0 flex items-center justify-center animate-spin" style={{ animationDuration: '10s' }}>
               <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(0deg) translateY(-60px)' }}>P</span>
-              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(45deg) translateY(-60px)' }}>O</span>
-              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(90deg) translateY(-60px)' }}>R</span>
-              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(135deg) translateY(-60px)' }}>T</span>
-              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(180deg) translateY(-60px)' }}>F</span>
-              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(225deg) translateY(-60px)' }}>O</span>
-              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(270deg) translateY(-60px)' }}>L</span>
-              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(315deg) translateY(-60px)' }}>I</span>
-              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(360deg) translateY(-60px)' }}>O</span>
+              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(40deg) translateY(-60px)' }}>O</span>
+              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(80deg) translateY(-60px)' }}>R</span>
+              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(120deg) translateY(-60px)' }}>T</span>
+              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(160deg) translateY(-60px)' }}>F</span>
+              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(200deg) translateY(-60px)' }}>O</span>
+              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(240deg) translateY(-60px)' }}>L</span>
+              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(280deg) translateY(-60px)' }}>I</span>
+              <span className="absolute text-xs" style={{ color: '#005939', transform: 'rotate(320deg) translateY(-60px)' }}>O</span>
             </div>
           </div>
           NDINDA MWANZA
