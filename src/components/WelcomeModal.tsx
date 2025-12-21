@@ -14,7 +14,14 @@ export default function WelcomeModal() {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-surface border border-border rounded-lg p-6 max-w-md mx-4 shadow-lg">
+      <div className="bg-surface border border-border rounded-lg p-6 max-w-md mx-4 shadow-lg relative">
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute top-2 right-2 text-red-500 hover:text-red-700 text-xl font-bold"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
         <h2 className="text-xl font-bold text-text mb-4">Welcome to NDINDA MWANZA's Portfolio</h2>
         <p className="text-text-muted mb-4">
           This site showcases my expertise in product marketing, content strategy, and digital growth. Explore my journey, services, and projects.
