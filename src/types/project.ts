@@ -4,6 +4,9 @@ export interface Project {
   tags: string[];
   thumbnail: string;
   slug: string;
+  featuredTags: string[];
+  skillsHref: string;
+  learnMoreHref: string;
   summary: string;
   challenge: string;
   strategy: string[];
