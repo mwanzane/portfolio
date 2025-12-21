@@ -1,9 +1,15 @@
+import Head from 'next/head';
 import Header from '@/components/Header';
 import { Button } from '@/components/Button';
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Head>
+        <title>About - NDINDA MWANZA | Product Marketing & Content Strategy Expert</title>
+        <meta name="description" content="Learn about NDINDA MWANZA's background in product marketing, content strategy, and digital growth. Experience in startups, brands, and creative storytelling." />
+      </Head>
+      <div className="min-h-screen bg-background">
       <Header />
 
       {/* About Content */}
@@ -55,6 +61,7 @@ export default function About() {
 <p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   )
 }

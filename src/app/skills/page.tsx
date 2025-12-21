@@ -1,10 +1,16 @@
 import Header from '@/components/Header';
+import Head from 'next/head';
 import Link from 'next/link';
 import { Button } from '@/components/Button';
 
 export default function Skills() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Head>
+        <title>Skills/Projects - Technical & Creative Expertise | NDINDA MWANZA</title>
+        <meta name="description" content="Discover skills in technical analysis, business development, operations, and independent projects. Explore creative and strategic capabilities." />
+      </Head>
+      <div className="min-h-screen bg-background">
       <Header />
 
       {/* Skills Content */}
@@ -12,9 +18,8 @@ export default function Skills() {
         <div className="container mx-auto px-6 max-w-4xl">
           <h1 className="text-hero font-bold text-text mb-12 text-center">Skills</h1>
           <div className="prose prose-lg mx-auto text-text">
-            <p className="text-subhero text-text-muted mb-8">Here are the key skills and expertise areas that define my professional capabilities.</p>
 
-            <h2 className="text-heading font-bold text-text mb-6">Technical</h2>
+            <h2 id="technical" className="text-heading font-bold text-text mb-6">Technical</h2>
             <ul className="text-subheading text-text-muted mb-8 space-y-2">
               <li><Link href="/skills/systems-analyst" className="hover:text-primary transition-smooth">Systems Analyst</Link></li>
               <li><Link href="/skills/business-development" className="hover:text-primary transition-smooth">Business Development</Link></li>
@@ -22,13 +27,13 @@ export default function Skills() {
               <li><Link href="/skills/independent-projects" className="hover:text-primary transition-smooth">Independent Projects</Link></li>
             </ul>
 
-            <h2 className="text-heading font-bold text-text mb-6">Content Strategy/Digital Marketing</h2>
+            <h2 id="content-strategy" className="text-heading font-bold text-text mb-6">Content Strategy/Digital Marketing</h2>
             <ul className="text-subheading text-text-muted mb-8 space-y-2">
               <li><Link href="/skills/redkite-candy" className="hover:text-primary transition-smooth">Redkite Candy</Link></li>
               <li><Link href="/skills/replom" className="hover:text-primary transition-smooth">Replom</Link></li>
             </ul>
 
-            <h2 className="text-heading font-bold text-text mb-6">Communications and Social Media</h2>
+            <h2 id="communications" className="text-heading font-bold text-text mb-6">Communications and Social Media</h2>
             <ul className="text-subheading text-text-muted mb-12 space-y-2">
               <li><Link href="/skills/allen-house" className="hover:text-primary transition-smooth">Office of Residential Life at Dartmouth</Link></li>
               <li><Link href="/skills/my-social-media" className="hover:text-primary transition-smooth">My Social Media</Link></li>
@@ -57,6 +62,7 @@ export default function Skills() {
         </a>
       </div>
 
-    </div>
+      </div>
+    </>
   )
 }

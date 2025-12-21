@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import { Button } from '@/components/Button';
@@ -14,6 +15,53 @@ interface FormData {
 }
 
 export default function Contact() {
+  return (
+    <>
+      <Head>
+        <title>Contact - Get In Touch | NDINDA MWANZA</title>
+        <meta name="description" content="Contact NDINDA MWANZA for product marketing, content strategy, and digital growth consulting. Send a message or schedule a call." />
+      </Head>
+      <div className="min-h-screen bg-background">
+        <Header />
+
+        <main className="py-section">
+          <div className="container mx-auto px-6 max-w-2xl">
+            <SectionHeading>Get In Touch</SectionHeading>
+            <p className="text-center text-text-muted mb-12">
+              Have a question or want to work together? Send me a message.
+            </p>
+
+            <ContactForm />
+          </div>
+        </main>
+
+        {/* Need a Quick Answer Card */}
+        <div className="mt-12 p-6 bg-surface border border-border rounded-lg text-center max-w-2xl mx-auto mb-12">
+          <h3 className="text-subheading font-bold text-text mb-4">Need a Quick Answer?</h3>
+          <p className="text-text-muted mb-6">
+            For paid questions or consulting, check out Replom.
+          </p>
+          <a
+            href="https://replom.com/ask/ndinda-f3089466"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-primary text-surface rounded hover:bg-primary/80"
+          >
+            Ask a Paid Question
+          </a>
+        </div>
+
+        <footer className="bg-surface border-t border-border py-8">
+          <div className="container mx-auto px-6 text-center">
+            <p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+    </>
+  );
+}
+
+function ContactForm() {
   const [form, setForm] = useState<FormData>({
     name: '',
     email: '',
@@ -61,7 +109,12 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Head>
+        <title>Contact - Get In Touch | NDINDA MWANZA</title>
+        <meta name="description" content="Contact NDINDA MWANZA for product marketing, content strategy, and digital growth consulting. Send a message or schedule a call." />
+      </Head>
+      <div className="min-h-screen bg-background">
       <Header />
 
       <main className="py-section">
@@ -149,21 +202,7 @@ export default function Contact() {
             </div>
           )}
 
-          {/* Paid Questions CTA */}
-          <div className="mt-12 p-6 bg-surface border border-border rounded-lg text-center">
-            <h3 className="text-subheading font-bold text-text mb-4">Need a Quick Answer?</h3>
-            <p className="text-text-muted mb-6">
-              For paid questions or consulting, check out Replom.
-            </p>
-            <Link
-              href="https://replom.com/ask/ndinda-f3089466"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-surface border border-primary text-primary rounded-lg hover:bg-primary hover:text-surface transition-smooth"
-            >
-              Ask a Paid Question
-            </Link>
-          </div>
+
         </div>
       </main>
 
@@ -173,6 +212,7 @@ export default function Contact() {
 <p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
