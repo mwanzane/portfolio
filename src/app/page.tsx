@@ -51,7 +51,7 @@ export default function Home() {
                            <Link href="/skills/redkite-candy" className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">Digital Marketing</Link>
                          </div>
                        </div>
-                       <Link href={project.slug === 'red-kite-candy' ? 'https://redkitecandy.com' : project.slug === 'replom' ? 'https://replom.com/ask' : `/projects/${project.slug}`} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-primary text-surface rounded hover:bg-primary/80">Learn More</Link>
+                        <a href={project.slug === 'red-kite-candy' ? 'https://redkitecandy.com' : project.slug === 'replom' ? 'https://replom.com' : `/projects/${project.slug}`} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-primary text-surface rounded hover:bg-primary/80">Learn More</a>
                      </div>
                    </>
                  ) : (
