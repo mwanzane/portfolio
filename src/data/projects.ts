@@ -4,7 +4,7 @@ export const projects: Project[] = [
    {
       title: "Red Kite Candy",
      role: "Independent Project, Brand Story",
-     tags: ["Product Marketing", "Content Strategy", "Digital Marketing"],
+      tags: ["Product Marketing", "Brand Story", "Content Strategy", "Digital Marketing"],
       thumbnail: "/RedKitecandy.webp",
      slug: "red-kite-candy",
      summary: "Transformed a local confectionery into a digitally engaged brand with a measurable content + distribution system.",
