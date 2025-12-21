@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System Tokens */
+:root {
+  /* Neutral Base */
+  --color-background: 255 255 255; /* white */
+  --color-surface: 255 255 255; /* white */
+  --color-text: 23 23 23; /* very dark gray */
+  --color-text-muted: 115 115 115; /* muted gray */
+  --color-border: 229 229 229; /* light gray */
+
+  /* Red Accent */
+  --color-red-accent: #C1121F;
+  --color-primary: 193 18 31; /* red-accent */
+  --color-primary-hover: 154 14 26; /* darker primary */
+  --color-primary-active: 127 11 22; /* even darker */
+
+  /* Additional Text Colors */
+  --color-heading: 23 23 23; /* same as text */
+  --color-subheading: 115 115 115; /* same as text-muted */
+  --color-red-700: 185 28 28; /* darker red */
+}
+
+/* Hover Transitions */
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s ease;
+  }
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(var(--color-primary));
+    transition: width 0.3s ease;
+  }
+  .link-underline:hover::after {
+    width: 100%;
+  }
+}
