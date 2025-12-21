@@ -19,10 +19,10 @@ export default function Home() {
             Turning attention into trust, trust into action.
           </h1>
           <div className="flex flex-col sm:flex-row gap-8 justify-center mb-10">
-            <Button href="/services#account-community" className="bg-transparent text-gray-700 hover:bg-red-500 hover:text-white px-4 py-2 border border-red-200 text-sm shadow-lg -mt-2 z-10">Account/Community Management</Button>
-            <Button href="/services#content-strategy" className="bg-transparent text-gray-700 hover:bg-red-500 hover:text-white px-4 py-2 border border-red-200 text-sm shadow-lg -mt-2 z-10">Content Strategy</Button>
-            <Button href="/services#digital-marketing" className="bg-transparent text-gray-700 hover:bg-red-500 hover:text-white px-4 py-2 border border-red-200 text-sm shadow-lg -mt-2 z-10">Digital Marketing</Button>
-            <Button href="/services#product-marketing" className="bg-transparent text-gray-700 hover:bg-red-500 hover:text-white px-4 py-2 border border-red-200 text-sm shadow-lg -mt-2 z-10">Product Marketing</Button>
+            <Button href="/services#account-community" className="bg-transparent text-gray-700 hover:bg-red-500 hover:text-white px-4 py-2 border border-red-200 text-sm shadow-md -mt-2 z-10">Account/Community Management</Button>
+            <Button href="/services#content-strategy" className="bg-transparent text-gray-700 hover:bg-red-500 hover:text-white px-4 py-2 border border-red-200 text-sm shadow-md -mt-2 z-10">Content Strategy</Button>
+            <Button href="/services#digital-marketing" className="bg-transparent text-gray-700 hover:bg-red-500 hover:text-white px-4 py-2 border border-red-200 text-sm shadow-md -mt-2 z-10">Digital Marketing</Button>
+            <Button href="/services#product-marketing" className="bg-transparent text-gray-700 hover:bg-red-500 hover:text-white px-4 py-2 border border-red-200 text-sm shadow-md -mt-2 z-10">Product Marketing</Button>
           </div>
           <p className="text-xl text-text-muted mb-6">
             <span className="block md:inline">When it's clear, it's easy to sell. </span><br className="md:hidden" />
