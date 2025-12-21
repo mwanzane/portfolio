@@ -52,4 +52,4 @@ This is a responsive portfolio site built with Next.js and Tailwind CSS for prod
 - React 18
 - TypeScript
 - Tailwind CSS
-- ESLint
+- ESLint# portfolio
