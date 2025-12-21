@@ -5,7 +5,7 @@ export const projects: Project[] = [
       title: "Red Kite Candy",
      role: "Independent Project, Brand Story",
      tags: ["Product Marketing", "Content Strategy", "Digital Marketing"],
-     thumbnail: "https://picsum.photos/400/300",
+      thumbnail: "/RedKitecandy.webp",
      slug: "red-kite-candy",
      summary: "Transformed a local confectionery into a digitally engaged brand with a measurable content + distribution system.",
      challenge: "Inconsistent brand narrative and lack of digital measurement.",
