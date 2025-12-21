@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center text-xl font-bold text-primary link-underline uppercase tracking-wide">
-          <div className="relative mr-6">
+          <div className="relative mr-10">
             <Image
               src="/pictures/headshot.jpg"
               alt="NDINDA MWANZA headshot"
