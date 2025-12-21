@@ -1,9 +1,41 @@
 import Header from '@/components/Header';
 import Head from 'next/head';
-import Link from 'next/link';
 import { Button } from '@/components/Button';
+import FeaturedCard from '@/components/FeaturedCard';
 
 export default function Skills() {
+  const skillsData = [
+    {
+      title: "Technical",
+      thumbnail: "https://picsum.photos/400/300?random=1",
+      featuredTags: [
+        { text: "Systems Analyst", href: "/skills/systems-analyst" },
+        { text: "Business Development", href: "/skills/business-development" },
+        { text: "Operations", href: "/skills/operations" },
+        { text: "Independent Projects", href: "/skills/independent-projects" }
+      ],
+      learnMoreHref: "/skills/systems-analyst"
+    },
+    {
+      title: "Content Strategy/Digital Marketing",
+      thumbnail: "https://picsum.photos/400/300?random=2",
+      featuredTags: [
+        { text: "Redkite Candy", href: "/skills/redkite-candy" },
+        { text: "Replom", href: "/skills/replom" }
+      ],
+      learnMoreHref: "/skills/redkite-candy"
+    },
+    {
+      title: "Communications and Social Media",
+      thumbnail: "https://picsum.photos/400/300?random=3",
+      featuredTags: [
+        { text: "Office of Residential Life at Dartmouth", href: "/skills/allen-house" },
+        { text: "My Social Media", href: "/skills/my-social-media" }
+      ],
+      learnMoreHref: "/skills/allen-house"
+    }
+  ];
+
   return (
     <>
       <Head>
@@ -15,33 +47,22 @@ export default function Skills() {
 
       {/* Skills Content */}
       <main className="py-section">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-6 max-w-6xl">
           <h1 className="text-hero font-bold text-text mb-12 text-center">Skills</h1>
-          <div className="prose prose-lg mx-auto text-text">
-
-            <h2 id="technical" className="text-heading font-bold text-text mb-6">Technical</h2>
-            <ul className="text-subheading text-text-muted mb-8 space-y-2">
-              <li><Link href="/skills/systems-analyst" className="hover:text-primary transition-smooth">Systems Analyst</Link></li>
-              <li><Link href="/skills/business-development" className="hover:text-primary transition-smooth">Business Development</Link></li>
-              <li><Link href="/skills/operations" className="hover:text-primary transition-smooth">Operations</Link></li>
-              <li><Link href="/skills/independent-projects" className="hover:text-primary transition-smooth">Independent Projects</Link></li>
-            </ul>
-
-            <h2 id="content-strategy" className="text-heading font-bold text-text mb-6">Content Strategy/Digital Marketing</h2>
-            <ul className="text-subheading text-text-muted mb-8 space-y-2">
-              <li><Link href="/skills/redkite-candy" className="hover:text-primary transition-smooth">Redkite Candy</Link></li>
-              <li><Link href="/skills/replom" className="hover:text-primary transition-smooth">Replom</Link></li>
-            </ul>
-
-            <h2 id="communications" className="text-heading font-bold text-text mb-6">Communications and Social Media</h2>
-            <ul className="text-subheading text-text-muted mb-12 space-y-2">
-              <li><Link href="/skills/allen-house" className="hover:text-primary transition-smooth">Office of Residential Life at Dartmouth</Link></li>
-              <li><Link href="/skills/my-social-media" className="hover:text-primary transition-smooth">My Social Media</Link></li>
-            </ul>
-
-            <div className="text-center">
-              <Button href="/">Back to Home</Button>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {skillsData.map((skill, index) => (
+              <FeaturedCard
+                key={skill.title}
+                thumbnail={skill.thumbnail}
+                title={skill.title}
+                featuredTags={skill.featuredTags}
+                learnMoreHref={skill.learnMoreHref}
+                index={index}
+              />
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button href="/">Back to Home</Button>
           </div>
         </div>
       </main>
