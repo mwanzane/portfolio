@@ -49,17 +49,30 @@ export default function Skills() {
       <main className="py-section">
         <div className="container mx-auto px-6 max-w-6xl">
           <h1 className="text-hero font-bold text-text mb-12 text-center">Skills</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skillsData.map((skill, index) => (
+          <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-wrap justify-center gap-8">
               <FeaturedCard
-                key={skill.title}
-                thumbnail={skill.thumbnail}
-                title={skill.title}
-                featuredTags={skill.featuredTags}
-                learnMoreHref={skill.learnMoreHref}
-                index={index}
+                thumbnail={skillsData[0].thumbnail}
+                title={skillsData[0].title}
+                featuredTags={skillsData[0].featuredTags}
+                learnMoreHref={skillsData[0].learnMoreHref}
+                index={0}
               />
-            ))}
+              <FeaturedCard
+                thumbnail={skillsData[1].thumbnail}
+                title={skillsData[1].title}
+                featuredTags={skillsData[1].featuredTags}
+                learnMoreHref={skillsData[1].learnMoreHref}
+                index={1}
+              />
+            </div>
+            <FeaturedCard
+              thumbnail={skillsData[2].thumbnail}
+              title={skillsData[2].title}
+              featuredTags={skillsData[2].featuredTags}
+              learnMoreHref={skillsData[2].learnMoreHref}
+              index={2}
+            />
           </div>
           <div className="text-center mt-12">
             <Button href="/">Back to Home</Button>
