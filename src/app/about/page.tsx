@@ -33,10 +33,26 @@ export default function About() {
         </div>
       </main>
 
+      {/* Need a Quick Answer Card */}
+      <div className="mt-12 p-6 bg-surface border border-border rounded-lg text-center max-w-2xl mx-auto">
+        <h3 className="text-subheading font-bold text-text mb-4">Need a Quick Answer?</h3>
+        <p className="text-text-muted mb-6">
+          For paid questions or consulting, check out Replom.
+        </p>
+        <a
+          href="https://replom.com/ask/ndinda-f3089466"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 bg-surface border border-primary text-primary rounded-lg hover:bg-primary hover:text-surface transition-smooth"
+        >
+          Ask a Paid Question
+        </a>
+      </div>
+
       {/* Footer */}
       <footer className="bg-surface border-t border-border py-8">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-text-muted">&copy; 2023 NDINDA MWANZA. All rights reserved.</p>
+<p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
         </div>
       </footer>
     </div>

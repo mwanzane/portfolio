@@ -167,9 +167,10 @@ export default function Contact() {
         </div>
       </main>
 
+
       <footer className="bg-surface border-t border-border py-8">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-text-muted">&copy; 2023 NDINDA MWANZA. All rights reserved.</p>
+<p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
         </div>
       </footer>
     </div>

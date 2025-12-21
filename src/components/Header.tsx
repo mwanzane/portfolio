@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Button } from './Button';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,13 +16,13 @@ export default function Header() {
             alt="NDINDA MWANZA headshot"
             width={120}
             height={120}
-            className="w-12 h-12 rounded-full mr-3 border border-border"
+            className="w-24 h-24 rounded-full mr-3 border border-border"
           />
           NDINDA MWANZA
         </Link>
         <nav className="hidden md:flex space-x-8 items-center">
-          <Link href="/" className="text-text hover:text-primary transition-smooth link-underline">Home</Link>
           <Link href="/about" className="text-text hover:text-primary transition-smooth link-underline">About</Link>
+          <Link href="/skills" className="text-text hover:text-primary transition-smooth link-underline">Skills</Link>
           <Link href="/contact" className="text-text hover:text-primary transition-smooth link-underline">Contact</Link>
           <Link
             href="https://replom.com/ask/ndinda-f3089466"
@@ -31,9 +30,8 @@ export default function Header() {
             rel="noopener noreferrer"
             className="text-text-muted hover:text-primary transition-smooth link-underline text-sm"
           >
-            Ask a Paid Question
+            Get paid for your expertise
           </Link>
-          <Button href="/resume.pdf" variant="secondary" className="ml-4">Download Resume</Button>
         </nav>
         <button
           className="md:hidden text-text"
@@ -48,8 +46,8 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden bg-surface border-t border-border py-4">
           <nav className="container mx-auto px-6 flex flex-col space-y-4">
-            <Link href="/" className="text-text hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>Home</Link>
             <Link href="/about" className="text-text hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>About</Link>
+            <Link href="/skills" className="text-text hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>Skills</Link>
             <Link href="/contact" className="text-text hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>Contact</Link>
             <Link
               href="https://replom.com/ask/ndinda-f3089466"
@@ -58,9 +56,8 @@ export default function Header() {
               className="text-text-muted hover:text-primary transition-smooth"
               onClick={() => setIsOpen(false)}
             >
-              Ask a Paid Question
+              Get paid for your expertise
             </Link>
-            <Button href="/resume.pdf" variant="secondary" onClick={() => setIsOpen(false)}>Download Resume</Button>
           </nav>
         </div>
       )}
