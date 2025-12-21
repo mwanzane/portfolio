@@ -42,11 +42,15 @@ export default function Home() {
                      <img src={project.thumbnail} alt={project.title} className="w-full md:w-1/2 h-64 object-cover rounded" />
                      <div className="w-full md:w-1/2 text-center md:text-left">
                        <h3 className="text-2xl font-bold text-text mb-4">{project.title}</h3>
-                       <div className="flex flex-wrap gap-2 mb-4">
-                         {["Brand Story", "Content Strategy", "Digital Marketing"].map(tag => (
-                           <Link key={tag} href="/skills/redkite-candy" className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">{tag}</Link>
-                         ))}
-                       </div>
+                        <div className="flex flex-col gap-2 mb-4">
+                          <div className="flex gap-2 justify-center">
+                            <Link href="/skills/redkite-candy" className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">Brand Story</Link>
+                            <Link href="/skills/redkite-candy" className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">Content Strategy</Link>
+                          </div>
+                          <div className="flex justify-center">
+                            <Link href="/skills/redkite-candy" className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">Digital Marketing</Link>
+                          </div>
+                        </div>
                        <Link href={`/projects/${project.slug}`} className="inline-block px-6 py-3 bg-primary text-surface rounded hover:bg-primary/80">Learn More</Link>
                      </div>
                    </>
@@ -54,11 +58,15 @@ export default function Home() {
                   <>
                      <div className="w-full md:w-1/2 text-center md:text-right">
                        <h3 className="text-2xl font-bold text-text mb-4">{project.title}</h3>
-                       <div className="flex flex-wrap gap-2 mb-4">
-                         {["Brand Story", "Content Strategy", "Digital Marketing"].map(tag => (
-                           <Link key={tag} href="/skills/redkite-candy" className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">{tag}</Link>
-                         ))}
-                       </div>
+                        <div className="flex flex-col gap-2 mb-4">
+                          <div className="flex gap-2 justify-center">
+                            <Link href="/skills/redkite-candy" className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">Brand Story</Link>
+                            <Link href="/skills/redkite-candy" className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">Content Strategy</Link>
+                          </div>
+                          <div className="flex justify-center">
+                            <Link href="/skills/redkite-candy" className="inline-block px-4 py-2 bg-gray-300 text-gray-700 hover:bg-red-500 hover:text-white border border-red-200 text-sm shadow-lg">Digital Marketing</Link>
+                          </div>
+                        </div>
                        <Link href={`/projects/${project.slug}`} className="inline-block px-6 py-3 bg-primary text-surface rounded hover:bg-primary/80">Learn More</Link>
                      </div>
                     <img src={project.thumbnail} alt={project.title} className="w-full md:w-1/2 h-64 object-cover rounded" />
