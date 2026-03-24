@@ -6,6 +6,12 @@ import Header from '@/components/Header';
 import { Button } from '@/components/Button';
 import Tag from '@/components/Tag';
 
+export async function generateStaticParams() {
+  return projects.map(project => ({
+    slug: project.slug,
+  }));
+}
+
 export default function CaseStudyPage({ params }: { params: { slug: string } }) {
   const project = projects.find(p => p.slug === params.slug);
   if (!project) {

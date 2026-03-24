@@ -1,0 +1,7 @@
+Digital Marketing
+Definition: Channel strategy, experiments, tracking, optimization.
+
+Current Mappings:
+- Red Kite Candy: Concrete measurement loop with QR code tracking used for optimization.
+
+Notes for Portfolio: Showcase data-driven approaches and optimization results.

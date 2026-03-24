@@ -36,11 +36,12 @@ export default function RedkiteCandy() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-surface border-t border-border py-8">
+      <footer className="bg-surface border-t border-border pt-16 pb-8 border-b border-red-500">
         <div className="container mx-auto px-6 text-center">
-<p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
+          <p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
         </div>
       </footer>
-    </div>
+      <div className="h-4 bg-red-500"></div>
+      </div>
   )
 }

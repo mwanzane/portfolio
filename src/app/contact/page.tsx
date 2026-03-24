@@ -2,10 +2,8 @@
 
 import { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import Header from '@/components/Header';
 import { Button } from '@/components/Button';
-import SectionHeading from '@/components/SectionHeading';
 
 interface FormData {
   name: string;
@@ -23,39 +21,20 @@ export default function Contact() {
       </Head>
       <div className="min-h-screen bg-background">
         <Header />
-
         <main className="py-section">
-          <div className="container mx-auto px-6 max-w-2xl">
-            <SectionHeading>Get In Touch</SectionHeading>
-            <p className="text-center text-text-muted mb-12">
-              Have a question or want to work together? Send me a message.
-            </p>
-
-            <ContactForm />
+          <div className="container mx-auto px-6">
+            <div className="max-w-2xl mx-auto">
+              <h1 className="text-hero font-bold text-text mb-12 text-center">Get In Touch With Me</h1>
+              <ContactForm />
+            </div>
           </div>
         </main>
-
-        {/* Need a Quick Answer Card */}
-        <div className="mt-12 p-6 bg-surface border border-border rounded-lg text-center max-w-2xl mx-auto mb-12">
-          <h3 className="text-subheading font-bold text-text mb-4">Need a Quick Answer?</h3>
-          <p className="text-text-muted mb-6">
-            For paid questions or consulting, check out Replom.
-          </p>
-          <a
-            href="https://replom.com/ask/ndinda-f3089466"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-primary text-surface rounded hover:bg-primary/80"
-          >
-            Ask a Paid Question
-          </a>
-        </div>
-
-        <footer className="bg-surface border-t border-border py-8">
+        <footer className="bg-surface border-t border-border pt-16 pb-8 border-b border-red-500">
           <div className="container mx-auto px-6 text-center">
             <p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
           </div>
         </footer>
+        <div className="h-4 bg-red-500"></div>
       </div>
     </>
   );
@@ -109,110 +88,82 @@ function ContactForm() {
   };
 
   return (
-    <>
-      <Head>
-        <title>Contact - Get In Touch | NDINDA MWANZA</title>
-        <meta name="description" content="Contact NDINDA MWANZA for product marketing, content strategy, and digital growth consulting. Send a message or schedule a call." />
-      </Head>
-      <div className="min-h-screen bg-background">
-      <Header />
-
-      <main className="py-section">
-        <div className="container mx-auto px-6 max-w-2xl">
-          <SectionHeading>Get In Touch</SectionHeading>
-          <p className="text-center text-text-muted mb-12">
-            Have a question or want to work together? Send me a message.
-          </p>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-text mb-2">
-                Name *
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-text"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-text mb-2">
-                Email *
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-text"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-text mb-2">
-                Message *
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                required
-                rows={6}
-                className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-text resize-vertical"
-              />
-            </div>
-
-            {/* Honeypot */}
-            <input
-              type="text"
-              name="honeypot"
-              value={form.honeypot}
-              onChange={handleChange}
-              style={{ display: 'none' }}
-              tabIndex={-1}
-              autoComplete="off"
-            />
-
-            <Button
-              type="submit"
-              disabled={status === 'sending'}
-              className="w-full"
-            >
-              {status === 'sending' ? 'Sending...' : 'Send Message'}
-            </Button>
-          </form>
-
-          {status === 'success' && (
-            <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-              <p className="text-green-800">Thank you! Your message has been sent successfully.</p>
-            </div>
-          )}
-
-          {status === 'error' && (
-            <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-red-800">Sorry, there was an error sending your message. Please try again.</p>
-            </div>
-          )}
-
-
-        </div>
-      </main>
-
-
-      <footer className="bg-surface border-t border-border py-8">
-        <div className="container mx-auto px-6 text-center">
-<p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
-        </div>
-      </footer>
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <label htmlFor="name" className="block text-sm font-medium text-text mb-2">
+          Name *
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          required
+          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-text"
+        />
       </div>
-    </>
+
+      <div>
+        <label htmlFor="email" className="block text-sm font-medium text-text mb-2">
+          Email *
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={form.email}
+          onChange={handleChange}
+          required
+          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-text"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-text mb-2">
+          Message *
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          value={form.message}
+          onChange={handleChange}
+          required
+          rows={6}
+          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-surface text-text resize-vertical"
+        />
+      </div>
+
+      {/* Honeypot */}
+      <input
+        type="text"
+        name="honeypot"
+        value={form.honeypot}
+        onChange={handleChange}
+        style={{ display: 'none' }}
+        tabIndex={-1}
+        autoComplete="off"
+      />
+
+      <Button
+        type="submit"
+        disabled={status === 'sending'}
+        className="w-full"
+      >
+        {status === 'sending' ? 'Sending...' : 'Send Message'}
+      </Button>
+
+      {status === 'success' && (
+        <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+          <p className="text-green-800">Thank you! Your message has been sent successfully.</p>
+        </div>
+      )}
+
+      {status === 'error' && (
+        <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+          <p className="text-red-800">Sorry, there was an error sending your message. Please try again.</p>
+        </div>
+      )}
+    </form>
   );
 }

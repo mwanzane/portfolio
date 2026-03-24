@@ -38,14 +38,15 @@ export default function Home() {
           <SectionHeading>Featured Projects</SectionHeading>
           <div className="flex flex-col gap-12">
              {projects.slice(0, 2).map((project, index) => (
-                <FeaturedCard
-                  key={project.slug}
-                  thumbnail={project.thumbnail}
-                  title={project.title}
-                  featuredTags={project.featuredTags.map(tag => ({ text: tag, href: project.skillsHref }))}
-                  learnMoreHref={project.learnMoreHref}
-                  index={index}
-                />
+                 <FeaturedCard
+                   key={project.slug}
+                   thumbnail={project.thumbnail}
+                   title={project.title}
+                   featuredTags={project.featuredTags.map(tag => ({ text: tag, href: project.skillsHref }))}
+                   learnMoreHref={project.learnMoreHref}
+                   showLearnMore={project.showLearnMore}
+                   index={index}
+                 />
               ))}
           </div>
         </div>
@@ -68,13 +69,11 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-surface border-t border-border pt-16 pb-8">
+      <footer className="bg-surface border-t border-border pt-16 pb-8 border-b border-red-500">
         <div className="container mx-auto px-6 text-center">
           <p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
         </div>
       </footer>
-
-      {/* Red Margin */}
       <div className="h-4 bg-red-500"></div>
     </div>
   );

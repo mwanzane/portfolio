@@ -7,8 +7,10 @@ export interface Project {
   featuredTags: string[];
   skillsHref: string;
   learnMoreHref: string;
+  showLearnMore?: boolean;
   summary: string;
   challenge: string;
   strategy: string[];
   results: string[];
+  featuredInSkills?: string[];
 }

@@ -1,102 +1,85 @@
-import Header from '@/components/Header';
 import Head from 'next/head';
+import Header from '@/components/Header';
 import { Button } from '@/components/Button';
 import FeaturedCard from '@/components/FeaturedCard';
 
 export default function Skills() {
   const skillsData = [
     {
-      title: "Technical",
+      title: "Digital Marketing",
       thumbnail: "https://picsum.photos/400/300?random=1",
       featuredTags: [
-        { text: "Systems Analyst", href: "/skills/systems-analyst" },
-        { text: "Business Development", href: "/skills/business-development" },
-        { text: "Operations", href: "/skills/operations" },
-        { text: "Independent Projects", href: "/skills/independent-projects" }
+        { text: "Portfolio", href: "/portfolio/digital-marketing", style: { color: '#005939' }, className: 'text-sm uppercase' }
       ],
-      learnMoreHref: "/skills/systems-analyst"
+      learnMoreHref: "/portfolio/digital-marketing",
+      showLearnMore: false
     },
     {
-      title: "Content Strategy/Digital Marketing",
+      title: "Content Strategy",
       thumbnail: "https://picsum.photos/400/300?random=2",
       featuredTags: [
-        { text: "Redkite Candy", href: "/skills/redkite-candy" },
-        { text: "Replom", href: "/skills/replom" }
+        { text: "Portfolio", href: "/portfolio/content-strategy", style: { color: '#005939' }, className: 'text-sm uppercase' }
       ],
-      learnMoreHref: "/skills/redkite-candy"
+      learnMoreHref: "/portfolio/content-strategy",
+      showLearnMore: false
     },
     {
-      title: "Communications and Social Media",
+      title: "Communications & Social Media",
       thumbnail: "https://picsum.photos/400/300?random=3",
       featuredTags: [
-        { text: "Office of Residential Life at Dartmouth", href: "/skills/allen-house" },
-        { text: "My Social Media", href: "/skills/my-social-media" }
+        { text: "Portfolio", href: "/portfolio/communications-social-media", style: { color: '#005939' }, className: 'text-sm uppercase' }
       ],
-      learnMoreHref: "/skills/allen-house"
+      learnMoreHref: "/portfolio/communications-social-media",
+      showLearnMore: false
+    },
+    {
+      title: "Product Marketing",
+      thumbnail: "https://picsum.photos/400/300?random=4",
+      featuredTags: [
+        { text: "Portfolio", href: "/portfolio/product-marketing", style: { color: '#005939' }, className: 'text-sm uppercase' }
+      ],
+      learnMoreHref: "/portfolio/product-marketing",
+      showLearnMore: false
     }
   ];
 
   return (
     <>
       <Head>
-        <title>Skills/Projects - Technical & Creative Expertise | NDINDA MWANZA</title>
-        <meta name="description" content="Discover skills in technical analysis, business development, operations, and independent projects. Explore creative and strategic capabilities." />
+        <title>Skills & Projects - NDINDA MWANZA | Product Marketing & Content Strategy</title>
+        <meta name="description" content="Explore NDINDA MWANZA's skills in product marketing, content strategy, digital marketing, and communications. View featured projects and portfolios." />
       </Head>
       <div className="min-h-screen bg-background">
-      <Header />
+        <Header />
 
-      {/* Skills Content */}
-      <main className="py-section">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <h1 className="text-hero font-bold text-text mb-12 text-center">Skills</h1>
-          <div className="flex flex-col items-center gap-8">
-            <div className="flex flex-wrap justify-center gap-8">
-              <FeaturedCard
-                thumbnail={skillsData[0].thumbnail}
-                title={skillsData[0].title}
-                featuredTags={skillsData[0].featuredTags}
-                learnMoreHref={skillsData[0].learnMoreHref}
-                index={0}
-              />
-              <FeaturedCard
-                thumbnail={skillsData[1].thumbnail}
-                title={skillsData[1].title}
-                featuredTags={skillsData[1].featuredTags}
-                learnMoreHref={skillsData[1].learnMoreHref}
-                index={1}
-              />
+        <main className="py-section">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h1 className="text-xl font-bold mb-12 text-center uppercase tracking-wide" style={{color: '#005939'}}>Portfolio</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {skillsData.map((skill, index) => (
+                <FeaturedCard
+                  key={index}
+                  thumbnail={skill.thumbnail}
+                  title={skill.title}
+                  featuredTags={skill.featuredTags}
+                  learnMoreHref={skill.learnMoreHref}
+                  index={index}
+                />
+              ))}
             </div>
-            <FeaturedCard
-              thumbnail={skillsData[2].thumbnail}
-              title={skillsData[2].title}
-              featuredTags={skillsData[2].featuredTags}
-              learnMoreHref={skillsData[2].learnMoreHref}
-              index={2}
-            />
+            <div className="text-center mt-12">
+              <Button href="/">Back to Home</Button>
+            </div>
           </div>
-          <div className="text-center mt-12">
-            <Button href="/">Back to Home</Button>
+        </main>
+
+        <footer className="bg-surface border-t border-border pt-16 pb-8 border-b border-red-500">
+          <div className="container mx-auto px-6 text-center">
+            <p className="text-text-muted">&copy; 2025 NDINDA MWANZA. All rights reserved.</p>
           </div>
-        </div>
-      </main>
-
-      {/* Need a Quick Answer Card */}
-      <div className="mt-12 p-6 bg-surface border border-border rounded-lg text-center max-w-2xl mx-auto">
-        <h3 className="text-subheading font-bold text-text mb-4">Need a Quick Answer?</h3>
-        <p className="text-text-muted mb-6">
-          For paid questions or consulting, check out Replom.
-        </p>
-        <a
-          href="https://replom.com/ask/ndinda-f3089466"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-6 py-3 bg-surface border border-primary text-primary rounded-lg hover:bg-primary hover:text-surface transition-smooth"
-        >
-          Ask a Paid Question
-        </a>
-      </div>
-
+        </footer>
+        <div className="h-4 bg-red-500"></div>
       </div>
     </>
-  )
+  );
 }
